@@ -13,6 +13,7 @@ cachetools==5.3.1
 certifi==2023.5.7
 charset-normalizer==3.1.0
 click==8.1.3
+command-not-found
 cryptography==3.4.8
 dataclasses-json==0.5.7
 dbus-python==1.2.18
@@ -21,7 +22,7 @@ deeplake==3.5.3
 dill==0.3.6
 distlib==0.3.6
 distro==1.7.0
-distro-info===1.1build1
+distro-info
 entrypoints==0.4
 filelock==3.12.0
 frozenlist==1.3.3
