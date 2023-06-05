@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyPrompt</title>
+    <!-- Add reference to the CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/artificial-intelligence.png') }}">
+</head>
+<body>
+    <!-- Header -->
+    <div class="body-head">
+        <div class="body-head-head">
+            <image src="{{ url_for('static', filename='images/artificial-intelligence.png') }}" alt="Logo"></image>
+            <header>
+                <h1>MyPrompt</h1>
+            </header>
+        </div>
+    </div>
+
+        <!-- New div for the rows -->
+    <div class="image-content">
+        <div class="image-head">
+            <img class="grid-image" src="{{ url_for('static', filename='images/paul-oliver-ololol.jpg') }}" alt="Logo">
+        </div>          
+        <div id="rowsContainer">
+            <div class="row">
+                <h1>Generate powerful prompts <br> for AI</h1>
+            </div>
+            <div class="row">
+                <textarea  id="inputConcept" type="text" placeholder="Enter a concept, and AI will generate prompt."></textarea>
+                <button id="generateButton" onclick="generatePrompt()">Generate prompt</button>
+            </div>
+            <div class="row">
+                <textarea  id="copyText" type="text"></textarea>
+                <button onclick="copyText()">COPY</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="gridBackground">
+        <h1>Prompt examples</h1>
+        <!-- New grid layout -->
+        <div class="container grid">
+            <div class="grid-item">
+                <div class="image-container">
+                    <img class="grid-image" src="{{ url_for('static', filename='images/cat.png') }}" alt="Logo">
+                </div>
+                <h3>Prompt</h3>
+                <p>Hyper realistic cat with rainbow wings, blue eyes, rainbow lilaciful 3d render hyper realistic 4k ultra detailed</p>
+            </div>
+            <div class="grid-item">
+                <div class="image-container">
+                    <img class="grid-image" src="{{ url_for('static', filename='images/huge_crystal_castle.png') }}" alt="Logo">
+                </div>
+                <h3>Prompt</h3>
+                <p>Huge crystal castle, fairy atmosphere, enchanted, volumetric lighting, atmosphere, Glowing particles, Light particles, Volumetric lighting, Epic composition, Round iris, Chameleon, Electric blue background, Magical, Epic composition, Ultra detailed, Volumetric lighting,</p>
+            </div>
+            <div class="grid-item">
+                <div class="image-container">
+                    <img class="grid-image" src="{{ url_for('static', filename='images/muppet_tshirt.png') }}" alt="Logo">
+                </div>
+                <h3>Prompt</h3>
+                <p>A T-shirt, muppet, muppet, hoodie with collar, metal t-shirt, T-Shirt, hat, hat, T-Shirt meme, t-shirt with a hoodie on, meme, graffiti</p>
+            </div>
+            <div class="grid-item">
+                <div class="image-container">
+                    <img class="grid-image" src="{{ url_for('static', filename='images/portrait.png') }}" alt="Logo">
+                </div>
+                <h3>Prompt</h3>
+                <p>Portrait of a beautiful woman with pink eyes, underwater with corals, vibrant blues, purples, whites, grunge, eerie, macabre, crazy detailed and complex, super detailed, 8K, 4k, photorealistic</p>
+            </div>
+            <div class="grid-item">
+                <div class="image-container">
+                    <img class="grid-image" src="{{ url_for('static', filename='images/synthwave_face.png') }}" alt="Logo">
+                </div>
+                <h3>Prompt</h3>
+                <p>Synthwave hitman face, symmetrical, symmetrical eyes, holding a moustache, robotic, world war 3, warzone, soldier, monster, warzone, character design, realistic, detailed, red smoke, synthwave, surreal, surreal, concept art, octane render, 8k, mellow lights, fog, contrast, movie poster, hyper realistic</p>
+            </div>
+            <div class="grid-item">
+                <div class="image-container">
+                    <img class="grid-image" src="{{ url_for('static', filename='images/viking.png') }}" alt="Logo">
+                </div>
+                <h3>Prompt</h3>
+                <p>My neighbor is a viking, portrait, character design, dieselpunk, punk, intricate details, in the style of Rick Baker and Marko Djurdjevic, glitch ink illustration</p>
+            </div>
+            <!-- Repeat for other grid items... -->
+        </div>
+    </div>
+
+    <div id="body-line0">
+        <div id="body-line"></div>
+    </div>
+
+    <!-- Footer -->
+    <div id="body-footer">
+        <footer>
+            <p>© 2023 My Website. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Add reference to the JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

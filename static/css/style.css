@@ -1,0 +1,310 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.body-head {
+    display: flex;
+    width: 100%;
+}
+
+.body-head-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box; 
+    padding-left: 20%;
+    margin-bottom: 40px;
+}
+
+
+.body-head-head img {
+    /*padding-top: 40px;*/
+    width: 8%;
+    height: auto;
+}
+
+.body-head-head header {
+    box-sizing: border-box; 
+    padding-top: 8px;
+    padding-left: 5px;
+    /*padding-left: 20%;*/
+}
+
+.image-content {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+/*
+#rowsContainer {
+    height: 33.33vh; 
+}
+*/
+
+header {
+    height: 90px;
+}
+
+#body-line {
+    width: 65%;
+    border-bottom: 2px solid #28282c;
+} 
+
+#body-line0 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #000;
+}
+
+footer {
+    color: #fff;
+    font-size:larger;
+}
+
+#body-footer {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2em;
+    /*justify-content: center;*/
+}
+
+textarea {
+    font-size: 2em;  /* 调整文本大小 */
+    width: 100%;  /* 调整输入框的宽度 */
+    height: 4em;  /* 调整输入框的高度 */
+    padding: 20px;  /* 增加内边距 */
+    box-sizing: border-box;  /* 使得宽度包含内边距和边框 */
+    resize: none;  /* 禁止用户调整文本框的大小 */
+}
+
+textarea:focus {
+    outline: none;
+  }
+
+#copyText {
+    font-size: 2em;  /* 调整文本大小 */
+    width: 100%;  /* 调整输入框的宽度 */
+    height: 4em;  /* 调整输入框的高度 */
+    padding: 20px;  /* 增加内边距 */
+    box-sizing: border-box;  /* 使得宽度包含内边距和边框 */
+    resize: none;  /* 禁止用户调整文本框的大小 */   
+}
+
+button {
+    font-size: 1.5em;  /* 调整文本大小 */
+    width: 400px;  /* 调整按钮的宽度 */
+    height: 4em;  /* 调整按钮的高度 */
+    padding: 20px;  /* 增加内边距 */
+    box-sizing: border-box;  /* 使得宽度包含内边距和边框 */
+    margin-left: 20px;
+    color: #fff;
+    --tw-bg-opacity: 1;
+    background-color: rgb(79 70 229/var(--tw-bg-opacity));
+}
+
+
+button:hover {
+    background-color: #4321d6;
+}
+
+/* New styles for the grid layout */
+.grid {
+  /*  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the size of the grid items */
+    grid-gap: 80px; /* Add space between grid items */
+}
+
+.grid-item {
+    /*border: 2px solid #961c1c;  
+    border-radius: 10px; */
+    padding: 20px;
+    text-align: start;
+    background-color: #242333;  /* Change the background color to black */
+    color: #fff;  /* Change the text color to white */
+    border-radius: 10px;
+}
+
+.grid-item h3 {
+    margin-top: 15%;
+    font-size: 150%;
+    color: #857a7a;
+}
+
+.grid-item p {
+    font-size: 120%;
+}
+
+.grid-image {
+    width: 100%;
+    height: auto;
+    /*border-radius: 20px;*/ 
+    transition: transform .2s;
+}
+
+.container {
+    width: 58%; 
+    margin: 0 auto; /* Add automatic horizontal margins */
+}
+
+.image-head {
+    width: 25%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.image-head img {
+    transition: transform 0.8s; 
+}
+
+.image-head:hover img {
+    transform: scale(1.05); 
+}
+
+#gridBackground {
+    background-color: #000;  /* 设置背景色为黑色 */
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    padding-bottom: 100px;
+}
+
+#gridBackground h1 {
+    margin-top: 3%;
+    font-size: 4em;
+}
+
+#rowsContainer {
+    width: 50%;
+    height: 40%;
+    box-sizing: border-box;  /* 使得宽度包含内边距和边框 */
+}
+
+#rowsContainer .row h1 {
+    font-size: 3em;  /* 调整字体大小 */
+}
+
+
+.image-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 120%; /* This will give a 4:3 aspect ratio. Adjust as needed. */
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; /* Add this */
+    left: 0; /* Add this */
+    transition: transform .8s; 
+    border-radius: 20px;
+}
+
+.image-container:hover img {
+    transform: scale(1.05); 
+}
+
+/* Responsive design */
+@media (max-width: 1500px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly; 
+    }
+
+    .image-head {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .row {
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .rowsContainer {
+        flex-direction: column;
+      }
+    
+      input[type="text"], textarea, button {
+        width: 100%;
+      }
+
+      #rowsContainer {
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+
+@media (max-height: 800px) {
+    /* 当浏览器高度小于或等于600px时，应用以下样式 */
+    #rowsContainer {
+        padding: 80px 0;
+    }
+    .container.grid {
+        margin-top: 80px;
+    }
+}
+
