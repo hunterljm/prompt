@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect
 import openai
 
 app = Flask(__name__)
@@ -44,6 +44,13 @@ def generate():
         return jsonify(response['choices'][0]['message']['content'].strip())
     except Exception as e:
         return jsonify(str(e)), 500
+
+@app.before_request
+def before_request():
+    if request.url.startswith('http://'):
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        return redirect(url, code=code)
 
 if __name__ == '__main__':
     app.run(debug=True)
