@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template, redirect
 import openai
+import os
 
 app = Flask(__name__)
 
@@ -45,5 +46,18 @@ def generate():
     except Exception as e:
         return jsonify(str(e)), 500
 
+
+@app.before_request
+def before_request():
+    if os.getenv('PROMPT_ENV') != 'TESTING':
+        if request.url.startswith('http://'):
+            url = request.url.replace('http://', 'https://', 1)
+            code = 301
+            return redirect(url, code=code)
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    if os.getenv('PROMPT_PORT') :
+        app.run(port=int(os.getenv('PROMPT_PORT')), use_debugger=True)
+    else:
+        app.run(use_debugger=True)
