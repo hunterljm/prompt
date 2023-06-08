@@ -282,6 +282,7 @@ button:hover {
 
     .row {
         flex-direction: column;
+        align-items: center;
         margin-bottom: 20px;
         margin-top: 20px;
     }
@@ -290,7 +291,11 @@ button:hover {
         flex-direction: column;
       }
     
-      input[type="text"], textarea, button {
+textarea {
+    width: 200%;
+}
+
+button {
         width: 100%;
       }
 
@@ -303,15 +308,3 @@ button:hover {
         padding: 0 20px;
     }
 }
-
-
-@media (max-height: 800px) {
-    /* 当浏览器高度小于或等于600px时，应用以下样式 */
-    #rowsContainer {
-        padding: 80px 0;
-    }
-    .container.grid {
-        margin-top: 80px;
-    }
-}
-
