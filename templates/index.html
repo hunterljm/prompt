@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>YeahPrompt</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Add reference to the CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/artificial-intelligence.png') }}">
+    <title>YeahPrompt</title>
 </head>
 <body>
     <!-- Header -->
@@ -92,11 +94,9 @@
     </div>
 
     <!-- Footer -->
-    <div id="body-footer">
-        <footer>
-            <p>© 2023 YeahPrompt. All rights reserved.</p>
-        </footer>
-    </div>
+    <footer id="body-footer">
+        <p>© 2023 YeahPrompt. All rights reserved.</p>
+    </footer>
 
     <!-- Add reference to the JavaScript file -->
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
