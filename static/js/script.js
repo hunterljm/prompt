@@ -43,3 +43,18 @@ function copyText() {
     document.execCommand("copy");
     /*alert("已复制: " + copyText.value);*/
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#generateButton').addEventListener('click', function () {
+        gtag('event', 'click', {
+            'event_category': 'Button',
+            'event_label': 'generateButton',
+        });
+    });
+    document.querySelector('#copyButton').addEventListener('click', function () {
+        gtag('event', 'click', {
+            'event_category': 'Button',
+            'event_label': 'copyButton',
+        });
+    });
+});

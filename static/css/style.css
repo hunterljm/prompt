@@ -122,7 +122,8 @@ textarea:focus {
 
 button {
     font-size: 1.5em;  /* 调整文本大小 */
-    width: 400px;  /* 调整按钮的宽度 */
+width: 50%;
+    /* 调整按钮的宽度 */
     height: 4em;  /* 调整按钮的高度 */
     padding: 20px;  /* 增加内边距 */
     box-sizing: border-box;  /* 使得宽度包含内边距和边框 */
@@ -250,7 +251,7 @@ button:hover {
 }
 
 /* Responsive design */
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
     .grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -287,11 +288,15 @@ button:hover {
         margin-top: 20px;
     }
 
-    .rowsContainer {
+#rowsContainer {
         flex-direction: column;
       }
     
 textarea {
+    width: 200%;
+}
+
+#copyText {
     width: 200%;
 }
 
